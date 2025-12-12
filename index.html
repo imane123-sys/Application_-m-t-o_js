@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-</head>
-<body>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-body">
     <section class="header">
-        <div class="header-div">
-            <h1>METEO</h1>
-            
-            <button class="search-btn">
-                <input type="text" class="input-txt">
+      <div class="header-div">
+        <h1 class="logo">METEO</h1>
 
-                <span class="material-symbols-outlined">
-                 search
-                 </span>
-            </button>
-            <img src="images/toggle_icon.png" alt="image dark mode ">
-            
+        <button class="search-btn">
+          <input
+            type="text"
+            class="input-txt"
+            id="input-txt"
+            placeholder="Rechercher une ville"
+          />
 
-            
-            
-
-
-        </div>
-
+          <span class="material-symbols-outlined" id="search"> search </span>
+        </button>
+        <img src="images/toggle_icon.png" alt="image dark mode " id="toogle" />
+      </div>
     </section>
 
     <section class="infos-weather">
-        
+      <div class="info-img">
+        <img
+          src="images/section-cloud2.png"
+          alt=""
+          class="image1"
+          id="image1"
+        />
+      </div>
+      <div class="info-city">
+        <h1 id="city">london,UK</h1>
 
-        <div class="info-img">
-            <img src="images/section-cloud2.png" alt="">
-        </div>
-        <div class="info-city"></div>
-            <h1>london,UK <br>
-                Mon 29 august
-            </h1>
-            <h2>19 °C </h2>
-            <p>mostly sunny</p>
-            <p>humidity 55%</p>
+        Mon 29 august
 
-
-        
-
+        <h2 id="temp">19 °C</h2>
+        <p id="description">mostly sunny</p>
+        <p id="humidity">humidity 55%</p>
+      </div>
     </section>
 
-    
-</body>
+    <!-- <section class="infos-days">
+      <div class="tuesday">
+        <h2>tuesday</h2>
+        <img src="" alt="" />
+      </div>
+
+      <div class="wednesday">
+        <h2>wednesday</h2>
+        <img src="" alt="" />
+      </div>
+
+      <div class="thursday">
+        <h2>thursday</h2>
+        <img src="" alt="" />
+      </div>
+
+      <div class="friday">
+        <h2>friday</h2>
+        <img src="" alt="" />
+      </div>
+
+      <div class="saturday">
+        <h2>saturday</h2>
+        <img src="" alt="" />
+      </div>
+    </section> -->
+  </body>
 </html>
