@@ -9,15 +9,28 @@ function getWeatherData(city) {
   )
     .then((res) => res.json())
     .then(
-      (data) => (
-        (document.getElementById("city").innerHTML = data.name),
-        (document.getElementById("temp").innerHTML = data.main.temp + "°C"),
-        (document.getElementById("description").innerHTML =
-          data.weather[0].description),
-        (document.getElementById("humidity").innerHTML =
-          data.main.humidity + "%")
-      )
-    );
+      (data) => {
+        if(data.cod === 400){
+          alert("city not Found");
+        return;
+        }
+        document.getElementById("city").innerHTML = data.name;
+        
+        document.getElementById("temp").innerHTML = data.main.temp + "°C";
+        document.getElementById("description").innerHTML =
+          data.weather[0].description;
+
+        document.getElementById("humidity").innerHTML =
+          data.main.humidity + "%";
+        const weatherId =data.weather[0].id;
+        imageCloude.src = `weather/${ChangeWeatherIcon(weatherId)}`
+         } )
+        .catch((error)=>{
+          alert("Error");
+          console.log(error);
+          
+
+        });
 }
 
 function theme() {
@@ -48,7 +61,6 @@ function ChangeWeatherIcon(id) {
   if (id <= 800) return "clear.svg";
   else return "clouds.svg";
 }
-imageCloude.src = `weather${ChangeWeatherIcon(id)}`;
 // il me reste de travailler sur responsive
 //si aucune ville ne se trouve pas not found
-// le changement d'icon cloud
+// le changement d'icon cloud et plutot le style

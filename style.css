@@ -31,7 +31,7 @@ body {
   border-radius: 20px;
   height: 50px;
   border: none;
-  margin-left: 500px;
+  /* margin-left: 500px; */
 }
 
 .input-txt {
@@ -63,4 +63,46 @@ body {
 .image1 {
   width: 300px;
   padding: 10px 10px;
+  height:auto;
 }
+
+
+
+
+
+@media (max-width: 1070px) {
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .search-btn {
+    width: 50%;
+    margin-left: 0;
+  }
+
+  .infos-weather {
+    flex-direction: column;
+    margin: 20px 50px;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .info-img {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .image1 {
+    width: 200px;
+  }
+
+  .info-city {
+    padding-left: 0;
+    align-items: center;
+  }
+}
+
